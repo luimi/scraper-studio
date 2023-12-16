@@ -35,9 +35,11 @@ app.get('/', (req, res) => {
 
 const axios = require("./controllers/axios")
 const puppeteer = require("./controllers/puppeteer")
+const puppeteerExternal = require("./controllers/puppeteer-external")
 const methods = {
     axios: axios,
-    puppeteer: puppeteer
+    puppeteer: puppeteer,
+    puppeteerExternal: puppeteerExternal,
 }
 app.get('/methods', (req, res) => {
     res.send(Object.keys(methods))
