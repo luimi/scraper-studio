@@ -37,11 +37,13 @@ const axios = require("./controllers/axios")
 const puppeteer = require("./controllers/puppeteer")
 const puppeteerExternal = require("./controllers/puppeteer-external")
 const xRay = require("./controllers/x-ray")
+const superagent = require("./controllers/superagent")
 const methods = {
     axios: axios,
     puppeteer: puppeteer,
     puppeteerExternal: puppeteerExternal,
     xRay: xRay,
+    superagent: superagent,
 }
 app.get('/methods', (req, res) => {
     res.send(Object.keys(methods))
