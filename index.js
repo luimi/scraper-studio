@@ -34,8 +34,10 @@ app.get('/', (req, res) => {
 */
 
 const axios = require("./controllers/axios")
+const puppeteer = require("./controllers/puppeteer")
 const methods = {
-    axios: axios
+    axios: axios,
+    puppeteer: puppeteer
 }
 app.get('/methods', (req, res) => {
     res.send(Object.keys(methods))
